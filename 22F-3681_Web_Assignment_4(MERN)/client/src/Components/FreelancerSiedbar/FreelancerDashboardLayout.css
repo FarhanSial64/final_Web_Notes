@@ -1,0 +1,10 @@
+.freelancer-dashboard-container {
+  display: flex;
+}
+
+.freelancer-dashboard-main {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}

@@ -1,0 +1,32 @@
+.client-sidebar {
+  width: 240px;
+  background-color: #232f3e;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.client-sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #ff9900;
+}
+
+.client-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.client-sidebar li {
+  margin: 15px 0;
+}
+
+.client-sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.client-sidebar a:hover {
+  text-decoration: underline;
+}

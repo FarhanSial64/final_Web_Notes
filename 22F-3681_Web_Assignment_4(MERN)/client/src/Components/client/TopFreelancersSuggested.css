@@ -1,0 +1,124 @@
+.top-freelancers {
+  width: 100%;
+}
+
+.top-freelancers h2 {
+  display: none; /* Hide the h2 since we're using the card's h3 instead */
+}
+
+.freelancers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.freelancer-card {
+  width: 250px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.freelancer-card:hover {
+  transform: translateY(-5px);
+}
+
+.freelancer-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.freelancer-avatar:hover {
+  transform: scale(1.1);
+}
+
+.freelancer-info {
+  padding: 10px 0;
+}
+
+.freelancer-name {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.freelancer-name:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.freelancer-skills {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.freelancer-rating {
+  font-size: 16px;
+  color: #28a745;
+  margin: 10px 0;
+}
+
+.freelancer-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.view-profile-btn {
+  background-color: #6c757d;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.view-profile-btn:hover {
+  background-color: #5a6268;
+}
+
+.invite-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+
+.invite-button:hover {
+  background-color: #0056b3;
+}
+
+.invite-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.invite-button.invited {
+  background-color: #28a745;
+}
+
+.invite-button.invited:hover {
+  background-color: #218838;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 5px;
+}

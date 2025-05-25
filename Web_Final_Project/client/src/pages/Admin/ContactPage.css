@@ -1,0 +1,169 @@
+.contact-page-container {
+  padding: 20px;
+}
+
+.contact-page-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #037878;
+  font-size: 1.8em;
+}
+
+.contact-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .contact-page-grid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+}
+
+
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 20px; /* Add padding around the form if needed */
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: sans-serif; /* Or your preferred professional font */
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #037878;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #037878;
+  color: white;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #037878;
+}
+
+.contact-form button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.form-success-message {
+  color: #28a745;
+  background-color: #d4edda;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center; /* Center the success message */
+}
+
+.contact-details-column h3 {
+  color: #037878; /* A teal-like color for the heading */
+  margin-bottom: 25px;
+  font-size: 1.8em; /* Slightly larger heading */
+}
+
+.contact-info {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info-item {
+  background-color: #f8f9fa; /* Very light gray background for the boxes */
+  padding: 15px 20px; /* More horizontal padding */
+  border-radius: 8px; /* Slightly more rounded corners */
+  margin-bottom: 18px; /* Increased spacing between items */
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+.contact-info-item:hover {
+  background-color: #e9ecef; /* Slightly darker gray on hover */
+}
+
+
+.contact-info-item svg {
+  color: #037878;
+  font-size: 20px; /* Adjust size as needed */
+  margin-right: 18px;
+  /* Additional adjustments for precise alignment */
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.contact-info-item span {
+  color: #495057;
+  font-size: 16px;
+  line-height: 1.5; /* Adjust line height for better text alignment */
+}
+
+.social-icons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  align-items: center; /* Ensure icons align vertically with each other */
+}
+
+.social-icons a {
+  font-size: 24px; /* Adjust size as needed */
+  color: #6c757d;
+  transition: color 0.3s ease;
+  display: inline-flex; /* Use inline-flex for better control over alignment */
+  align-items: center; /* Vertically center the icon within the link */
+  justify-content: center; /* Horizontally center if needed */
+}
+
+.social-icons a:hover {
+  color: #037878;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 24px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #037878; /* Example hover color */
+}
+
+.map-container {
+  margin-top: 30px;
+  border-radius: 5px;
+  overflow: hidden; /* To contain the iframe within the rounded border */
+}

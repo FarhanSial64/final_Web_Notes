@@ -1,0 +1,31 @@
+* {
+
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh; /* Ensure it's at least the viewport height */
+  width: 100%;  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f9;
+}
+
+
+input, button, select {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.auth-wrapper{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/adminDashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Admin Dashboard</h1>
+        <a href="/auth/login" class="logout-btn">Logout</a>
+    </header>
+
+    <main>
+        <section class="dashboard-cards">
+            <div class="card">
+                <h2>Manage Courses</h2>
+                <p>Add, update, or delete courses with ease.</p>
+                <a href="/admin/courses">Go to Courses</a>
+            </div>
+            <div class="card">
+                <h2>Student Management</h2>
+                <p>View and manage student registrations efficiently.</p>
+                <a href="/admin/students">Manage Students</a>
+            </div>
+            <div class="card">
+                <h2>Seat Management</h2>
+                <p>Adjust available seats for courses dynamically.</p>
+                <a href="/admin/seats">Seat Management</a>
+            </div>
+            <div class="card">
+                <h2>Reports</h2>
+                <p>Generate and view detailed reports on students and courses.</p>
+                <a href="/admin/reports">View Reports</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Admin Dashboard © 2025. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/adminDashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+.freelancer-ratings-summary {
+  width: 100%;
+  height: 100%;
+}
+
+.freelancer-ratings-summary h3 {
+  display: none; /* Hide the h3 since we're using the card's h3 instead */
+}
+
+.ratings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rating-card {
+  background-color: #f8f8f8;
+  padding: 12px 16px;
+  border-left: 4px solid #28a745;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.rating-card:hover {
+  transform: translateX(3px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Different colors for different ratings */
+.rating-card:nth-child(1) {
+  border-left-color: #ffc107; /* Gold for top rating */
+}
+
+.rating-card:nth-child(2) {
+  border-left-color: #17a2b8; /* Cyan */
+}
+
+.rating-card:nth-child(3) {
+  border-left-color: #6f42c1; /* Purple */
+}
+
+.rating-card:nth-child(4) {
+  border-left-color: #fd7e14; /* Orange */
+}
+
+.rating-card:nth-child(5) {
+  border-left-color: #20c997; /* Teal */
+}
+
+.rating-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating-stars {
+  color: #f39c12;
+  font-weight: bold;
+}
+
+.no-rating {
+  color: #6c757d;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.project-title {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}

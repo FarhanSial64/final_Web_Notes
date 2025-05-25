@@ -1,0 +1,30 @@
+.freelancer-sidebar {
+  width: 240px;
+    background-color: #232f3e;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.freelancer-sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.freelancer-sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.freelancer-sidebar nav ul li {
+  margin: 15px 0;
+}
+
+.freelancer-sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.freelancer-sidebar nav ul li a:hover {
+  text-decoration: underline;
+}

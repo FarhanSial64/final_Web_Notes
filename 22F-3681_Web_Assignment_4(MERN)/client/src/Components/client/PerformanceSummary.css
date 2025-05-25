@@ -1,0 +1,70 @@
+.performance-summary {
+  width: 100%;
+  height: 100%;
+}
+
+.performance-summary h3 {
+  display: none; /* Hide the h3 since we're using the card's h3 instead */
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+}
+
+.summary-card {
+  background-color: #f9f9f9;
+  border-left: 4px solid #007bff;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Different colors for different metrics */
+.summary-card:nth-child(1) {
+  border-left-color: #28a745; /* Green for hire time */
+}
+
+.summary-card:nth-child(2) {
+  border-left-color: #dc3545; /* Red for spending */
+}
+
+.summary-card:nth-child(3) {
+  border-left-color: #007bff; /* Blue for posted */
+}
+
+.summary-card:nth-child(4) {
+  border-left-color: #6f42c1; /* Purple for completed */
+}
+
+.summary-card:nth-child(5) {
+  border-left-color: #fd7e14; /* Orange for completion rate */
+}
+
+.summary-card:nth-child(6) {
+  border-left-color: #20c997; /* Teal for bids */
+}
+
+.summary-card:nth-child(7) {
+  border-left-color: #ffc107; /* Yellow for ratings */
+}
+
+.summary-card h4 {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.summary-card p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+}

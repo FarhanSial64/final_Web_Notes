@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Course Registration System</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Add FontAwesome for the eye icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="system-name">
+        <h1>Course Registration System</h1>
+    </div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/auth/login" method="POST">
+            <div class="input-group">
+                <input type="text" name="username" placeholder="Username or Roll Number" required>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <i class="fas fa-eye" id="togglePassword"></i> <!-- Eye icon -->
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script src="/js/login.js">
+        
+    </script>
+</body>
+</html>

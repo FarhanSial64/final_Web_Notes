@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Courses</title>
+    <link rel="stylesheet" href="/css/adminCourse.css">
+</head>
+<body>
+    <header>
+        <h1>Course Management</h1>
+        <div class="header-buttons">
+            <a href="/admin/adminDashboard" class="back-btn">Back to Dashboard</a>
+            <a href="/auth/login" class="logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="course-form">
+            <h2><%= editingCourse ? 'Edit Course' : 'Add New Course' %></h2>
+            <form action="<%= editingCourse ? '/admin/courses/update/' + editingCourse._id : '/admin/courses/add' %>" method="POST">
+                <input type="text" name="courseCode" placeholder="Course Code" value="<%= editingCourse ? editingCourse.courseCode : '' %>" required>
+                <input type="text" name="courseName" placeholder="Course Name" value="<%= editingCourse ? editingCourse.title : '' %>" required>
+                <input type="number" name="seatsAvailable" placeholder="Seats Available" value="<%= editingCourse ? editingCourse.seatsAvailable : '' %>" required>
+
+                <label for="department">Department:</label>
+                <select name="department" id="department" required>
+                    <option value="CS" <%= editingCourse && editingCourse.department === 'CS' ? 'selected' : '' %>>Computer Science</option>
+                    <option value="EE" <%= editingCourse && editingCourse.department === 'EE' ? 'selected' : '' %>>Electrical Engineering</option>
+                    <option value="ME" <%= editingCourse && editingCourse.department === 'ME' ? 'selected' : '' %>>Mechanical Engineering</option>
+                </select>
+
+                <label for="schedule">Schedule:</label>
+                <div class="schedule-section">
+                    <div class="checkbox-group">
+                        <label>Select Days:</label><br>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="days" value="Monday" <%= editingCourse && editingCourse.days.includes('Monday') ? 'checked' : '' %>>
+                            <label>Monday</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="days" value="Tuesday" <%= editingCourse && editingCourse.days.includes('Tuesday') ? 'checked' : '' %>>
+                            <label>Tuesday</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="days" value="Wednesday" <%= editingCourse && editingCourse.days.includes('Wednesday') ? 'checked' : '' %>>
+                            <label>Wednesday</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="days" value="Thursday" <%= editingCourse && editingCourse.days.includes('Thursday') ? 'checked' : '' %>>
+                            <label>Thursday</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="days" value="Friday" <%= editingCourse && editingCourse.days.includes('Friday') ? 'checked' : '' %>>
+                            <label>Friday</label>
+                        </div>
+                    </div>
+                    <div class="time-slot">
+                        <label>Start Time:</label>
+                        <input type="time" name="startTime" value="<%= editingCourse ? editingCourse.startTime : '' %>" required>
+                        <label>End Time:</label>
+                        <input type="time" name="endTime" value="<%= editingCourse ? editingCourse.endTime : '' %>" required>
+                    </div>
+                </div>
+
+                <label for="prerequisites">Select Prerequisites:</label>
+                <select name="prerequisites[]" id="prerequisites" class="prerequisites-dropdown" multiple>
+                    <% if (courses.length > 0) { %>
+                        <% courses.forEach(course => { %>
+                            <option value="<%= course.courseCode %>" <%= editingCourse && editingCourse.prerequisites.some(p => p.courseCode === course.courseCode) ? 'selected' : '' %>><%= course.title %></option>
+                        <% }); %>
+                    <% } else { %>
+                        <option disabled>No courses available</option>
+                    <% } %>
+                </select>
+
+                <button type="submit"><%= editingCourse ? 'Update Course' : 'Add Course' %></button>
+            </form>
+        </section>
+
+        <section class="course-list">
+            <h2>Existing Courses</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Seats Available</th>
+                        <th>Department</th>
+                        <th>Days</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Prerequisites</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% courses.forEach(course => { %>
+                        <tr>
+                            <td><%= course.courseCode %></td>
+                            <td><%= course.title %></td>
+                            <td><%= course.seatsAvailable %></td>
+                            <td><%= course.department %></td>
+                            <td>
+                                <% if (course.days && course.days.length > 0) { %>
+                                    <%= course.days.join(", ") %>
+                                <% } else { %>
+                                    No Days Assigned
+                                <% } %>
+                            </td>
+                            <td><%= course.startTime ? course.startTime : "N/A" %></td>
+                            <td><%= course.endTime ? course.endTime : "N/A" %></td>
+                            <td>
+                                <% if (course.prerequisites.length > 0) { %>
+                                    <%= course.prerequisites.map(p => p.title).join(", ") %>
+                                <% } else { %>
+                                    None
+                                <% } %>
+                            </td>
+                            <td>
+                                <a href="/admin/courses/update/<%= course._id %>" class="edit-btn">Edit</a>
+                                <form action="/admin/courses/delete/<%= course._id %>" method="POST" style="display:inline;">
+                                    <button type="submit" class="delete-btn">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Admin Dashboard © 2025</p>
+    </footer>
+</body>
+</html>

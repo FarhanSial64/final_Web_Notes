@@ -1,0 +1,285 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    width: 96%;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.back-btn, .logout-btn {
+    background: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s ease-in-out;
+}
+
+.back-btn {
+    background: #00bcd4;
+}
+
+.back-btn:hover {
+    background: #0097a7;
+}
+
+.logout-btn:hover {
+    background: #cc0000;
+}
+
+/* Main Section */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.course-form, .course-list {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, select {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Dropdown Styling */
+select {
+    background: white;
+    color: #333;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    
+}
+
+select:focus {
+    border-color: #00bcd4;
+    outline: none;
+}
+
+select option {
+    color: black; /* Make sure options inside the dropdown are visible */
+    background: white;
+}
+
+.prerequisites-dropdown {
+    width: 70%; /* Adjust width to fit content */
+    max-width: 600px; /* Set a max width */
+    min-width: 200px; /* Prevent it from being too small */
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.prerequisites-dropdown option {
+    color: black;
+    background: white;
+}
+
+/* Checkbox Group Styling */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns checkboxes to the left */
+    gap: 8px;
+    margin-left: 20%;
+    width: 100%; /* Ensures full width for proper alignment */
+}
+
+/* Checkbox Item */
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #00bcd4;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 5px 0;
+    display: block;
+}
+
+/* Schedule Section Styling */
+.schedule-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 95%;
+    margin-top: 15px;
+}
+
+/* Time Slot Styling */
+.time-slot {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+input[type="time"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    background: white;
+    cursor: pointer;
+}
+
+input[type="time"]:focus {
+    border-color: #00bcd4;
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    background: #00bcd4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0097a7;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+td, th {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    color: #fff;
+}
+
+tr:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.delete-btn {
+    background: #ff4d4d;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+}
+
+.edit-btn {
+    background: #4da6ff;
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    width: 52%;
+    margin-bottom: 10px;
+}
+
+.edit-btn:hover {
+    background: #007acc;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    width: 97%;
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+}

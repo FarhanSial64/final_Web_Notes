@@ -1,0 +1,126 @@
+/* MyProjects.css */
+
+.my-projects-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 20px;
+  background-color: #f9f9f9;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-header {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.project-status {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.project-description {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.bid-section-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.bid-box {
+  background-color: #f4f4f4;
+  border-left: 4px solid #2196f3;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+}
+
+.bid-box strong {
+  font-weight: 600;
+  color: #444;
+}
+
+.bid-box p {
+  margin: 4px 0;
+  font-size: 15px;
+  color: #555;
+}
+
+.assign-button {
+  margin-top: 10px;
+  background-color: #2196f3;
+  color: #fff;
+  padding: 6px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.assign-button:hover {
+  background-color: #1976d2;
+}
+
+.filter-select {
+  margin-bottom: 25px;
+  width: 250px;
+}
+
+.pagination-wrapper {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-project-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.filter-select {
+  min-width: 200px;
+}
+
+#deadline {
+  width: 94%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: border 0.3s ease;
+}
+
+/* Focus state for deadline input */
+#deadline:focus {
+  border-color: #2196f3;
+  outline: none;
+  background-color: #fff;
+}

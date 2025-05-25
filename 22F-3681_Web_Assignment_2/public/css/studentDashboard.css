@@ -1,0 +1,221 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 30px;
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.logout-btn {
+    background: #ff4d4d;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s ease-in-out;
+}
+
+.logout-btn:hover {
+    background: #cc0000;
+}
+
+/* Sections */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* Schedule Grid */
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 120px repeat(5, 1fr); /* Time column + 5 days */
+    grid-auto-rows: 60px;
+    gap: 5px;
+    background: #6b6bce;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 90%;
+    margin: auto;
+}
+
+/* Header Row (Days) */
+.schedule-header {
+    display: contents; /* Ensures children align with grid */
+}
+
+.schedule-header .day-label {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #222;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Schedule Row (Each Time Slot) */
+
+
+
+/* Course Filters */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filters select, .filters input, .filters button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.filters button {
+    background: #00bcd4;
+    color: white;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background: #0097a7;
+}
+
+/* Course Results */
+.course-results {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 100px;
+}
+
+/* Prerequisite Section */
+.prerequisite-section {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+/* Student Dashboard Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+td, th {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    color: #fff;
+}
+
+tr:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.delete-btn {
+    background: #ff4d4d;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+}
+
+.edit-btn {
+    background: #4da6ff;
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    width: 52%;
+    margin-bottom: 10px;
+}
+
+.edit-btn:hover {
+    background: #007acc;
+}
+
+/* Register Button */
+.register-btn {
+    background: #28a745;
+    padding: 8px 12px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.register-btn:hover {
+    background: #218838;
+}
+
+.drop-btn {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.drop-btn {
+    background-color: #f44336;
+    color: white;
+    margin-left: 8px;
+}
+
+.drop-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    width: 98%;
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 14px;
+}

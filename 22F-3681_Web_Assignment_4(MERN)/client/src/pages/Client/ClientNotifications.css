@@ -1,0 +1,11 @@
+/* ClientNotifications.css */
+.client-notifications {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.client-notifications ul {
+  list-style-type: none;
+  padding: 0;
+}

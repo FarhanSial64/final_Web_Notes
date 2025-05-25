@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Management</title>
+    <link rel="stylesheet" href="/css/adminSeats.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Seat Management</h1>
+        <div class="header-buttons">
+            <a href="/admin/adminDashboard" class="back-btn">Back to Dashboard</a>
+            <a href="/auth/login" class="logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="title-bar">
+            <h2>Seat Management</h2>
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <label for="searchInput">
+                    <i class="fas fa-search"></i>
+                </label>
+                <input type="text" id="searchInput" placeholder="Search courses...">
+            </div>
+        </div>
+
+        <!-- Table Wrapper for Scroll -->
+        <div class="table-wrapper">
+            <table class="seat-table">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Seats Available</th>
+                        <th>Update Seats</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="courseTableBody">
+                    <% courses.forEach(course => { %>
+                        <tr>
+                            <td><%= course.courseCode %></td>
+                            <td><%= course.title %></td>
+                            <td><%= course.seatsAvailable %></td>
+                            <td>
+                                <form action="/admin/seats/update/<%= course._id %>" method="POST">
+                                    <input type="number" name="seatsAvailable" value="<%= course.seatsAvailable %>" min="0" required>
+                            </td>
+                            <td>
+                                    <button type="submit" class="update-btn">Update</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Course Registration System. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Search Functionality -->
+    <script src="/js/adminSeats.js">
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+/* src/pages/Customer/ProductPage/ProductPage.css */
+.section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section + .section {
+  margin-top: 40px;
+}
+
+.white-box {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+}
+
+
+
+.product-grid {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .product-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+
+
+.filter-bar {
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.main-content {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .product-section {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    position: relative;
+  }
+  
+  .loading-box, .scroll-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+  }
+  
+  .product-card-wrapper {
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  

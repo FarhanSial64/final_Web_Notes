@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="/css/adminStudentsStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header>
+        <h1>Student Management</h1>
+        <div class="header-buttons">
+            <a href="/admin/adminDashboard" class="back-btn">Back to Dashboard</a>
+            <a href="/auth/login" class="logout-btn">Logout</a>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="title-bar">
+            <h2>Manage Student Registrations</h2>
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <label for="searchInput">
+                    <i class="fas fa-search"></i>
+                </label>
+                <input type="text" id="searchInput" placeholder="Search courses...">
+            </div>
+        </div>
+
+        <!-- Table Wrapper for Scroll -->
+        <div class="table-wrapper">
+            <table class="student-table">
+                <thead>
+                    <tr>
+                        <th>Roll Number</th>
+                        <th>Student Name</th>
+                        <th>Courses Enrolled</th>
+                        <th>Register in Course</th>
+                        <th>Drop Course</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                    <% students.forEach(student => { %>
+                        <tr>
+                            <td><%= student.rollNumber %></td>
+                            <td><%= student.name %></td>
+                            <td>
+                                <ul>
+                                    <% if (student.registeredCourses && student.registeredCourses.length > 0) { %>
+                                        <% student.registeredCourses.forEach(course => { %>
+                                            <li><%= course.courseCode %> - <%= course.title %></li>
+                                        <% }); %>
+                                    <% } else { %>
+                                        <li>No courses registered</li>
+                                    <% } %>
+                                </ul>
+                            </td>
+                            <td>
+                                <form action="/admin/students/register/<%= student._id %>" method="POST">
+                                    <select name="courseId" required>
+                                        <% courses.forEach(course => { %>
+                                            <option value="<%= course._id %>"><%= course.courseCode %> - <%= course.title %></option>
+                                        <% }); %>
+                                    </select>
+                                    <button type="submit" class="register-btn">Register</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="/admin/students/drop/<%= student._id %>" method="POST">
+                                    <select name="courseId" required>
+                                        <% student.registeredCourses.forEach(course => { %>
+                                            <option value="<%= course._id %>"><%= course.courseCode %> - <%= course.title %></option>
+                                        <% }); %>
+                                    </select>
+                                    <button type="submit" class="drop-btn">Drop</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Course Registration System. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Search Functionality -->
+    <script src="/js/adminStudents.js">
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    width: 96%;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-radius: 8px;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.back-btn, .logout-btn {
+    background: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+.back-btn {
+    background: #00bcd4;
+}
+
+.back-btn:hover {
+    background: #0097a7;
+}
+
+.logout-btn:hover {
+    background: #cc0000;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: auto;
+    max-height: 75vh; /* Enables scrolling when data exceeds viewport */
+}
+
+/* Title Bar */
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-bar label {
+    margin-right: 10px;
+    color: #fff;
+}
+
+.search-bar i {
+    font-size: 16px;
+    color: #ddd;
+}
+
+/* Override conflicting styles for search bar input */
+.search-bar input[type="text"] {
+    background: transparent;
+    color: #fff;
+    text-align: left;
+}
+
+/* Search Bar Input Focus */
+.search-bar input:focus {
+    border: none;
+    outline: none;
+    box-shadow: none; 
+}
+/* Table Styling */
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+td, th {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    color: #fff;
+}
+
+tr:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+/* Dropdowns */
+select {
+    padding: 12px;
+    border-radius: 16px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    background: #a288d5; /* Match the color */
+    color: white;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+select:focus {
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.2), inset -3px -3px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Course List */
+.course-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.course-list li {
+    background: rgba(255, 255, 255, 0.2);
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Buttons */
+.action-btn, .register-btn, .drop-btn {
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.register-btn {
+    background: #4CAF50;
+    color: white;
+    margin-top: 4px;
+}
+
+.register-btn:hover {
+    background: #388E3C;
+}
+
+.drop-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    box-shadow: 0 2px 4px rgba(255, 77, 77, 0.4);
+    margin-top: 4px;
+}
+
+.drop-btn:hover {
+    background: #cc0000;
+    box-shadow: 0 4px 8px rgba(255, 77, 77, 0.6);
+}
+
+/* Form Styling */
+select, input[type="text"] {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    background: white;
+    transition: all 0.3s ease-in-out;
+}
+
+select:focus, input[type="text"]:focus {
+    border: 2px solid #00bcd4;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar input {
+        width: 200px;
+    }
+
+    .student-table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+/* Footer - Fixed at Bottom */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 8px 8px 0 0;
+}

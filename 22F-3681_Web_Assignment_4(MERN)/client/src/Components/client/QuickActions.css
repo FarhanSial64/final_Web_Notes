@@ -1,0 +1,31 @@
+.quick-actions {
+  width: 100%;
+}
+
+.quick-actions h2 {
+  display: none; /* Hide the h2 since we're using the card's h3 instead */
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.action-btn {
+  flex: 1 1 45%;
+  min-width: 160px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.action-btn:hover {
+  background-color: #0056b3;
+}
